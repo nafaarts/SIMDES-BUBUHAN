@@ -107,7 +107,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
-      <h2 data-text="Selamat Datang Di Aplikasi" style="font-size:50px; color:rgba(0, 0, 0, 0.7)">Selamat Datang Di Aplikasi</h2>
+      <h2 data-text="Selamat Datang Di Aplikasi" style="font-size:30px; color:rgba(0, 0, 0, 0.7)">Selamat Datang Di Aplikasi</h2>
       <h2 data-text="Tata Kelola Dan Pelayanan Desa Bubuhan">Tata Kelola Dan Pelayanan Desa Bubuhan</h2>
     </div>
   </section><!-- End Hero -->
