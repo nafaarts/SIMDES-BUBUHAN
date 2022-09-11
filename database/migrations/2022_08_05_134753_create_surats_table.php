@@ -57,6 +57,7 @@ class CreateSuratsTable extends Migration
             $table->string('namayangberbeda')->nullable();
             $table->string('tempatnamayangberbeda')->nullable();
             $table->date('tanggalnamayangberbeda')->nullable();
+            // $table->boolean('dilihat')->default(false);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade')->onDelete('cascade');
         });

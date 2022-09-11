@@ -116,7 +116,7 @@
                                <i class="bi bi-whatsapp"></i>
                                </button>
                            </form>                           
-                           <a target="_blank" href="{{ asset('storage/public/'. $v->surat_path) }}"  class="btn btn-primary">
+                           <a target="_blank" href="{{ asset('storage/'. $v->surat_path) }}"  class="btn btn-primary">
                                <i class="bi bi-eye"></i>                           
                            </a>
                            {{-- <a href="" class="btn btn-primary">
