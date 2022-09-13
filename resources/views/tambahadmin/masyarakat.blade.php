@@ -33,9 +33,9 @@
         
         <label for="jeniskelamin" class="form-label">Jenis Kelamin</label>
         <select class="form-select mb-3" aria-label="Default select example" id="jeniskelamin" name="jeniskelamin">
-        <option selected>Pilih</option>
-        <option value="laki-laki">Laki-Laki</option>
-        <option value="perempuan">Perempuan</option>
+            <option selected>Pilih</option>
+            <option value="laki-laki">Laki-Laki</option>
+            <option value="perempuan">Perempuan</option>
         </select>
 
             <label for="agama" class="form-label">Agama</label>
