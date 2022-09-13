@@ -174,7 +174,8 @@ class SuratController extends Controller
             'tanggalmeninggal' => 'nullable',
             'namayangberbeda' => 'nullable',
             'tempatnamayangberbeda' => 'nullable',
-            'tanggalnamayangberbeda' => 'nullable'
+            'tanggalnamayangberbeda' => 'nullable',
+            'isOpened' => 'nullable',
             
         ]);
         $noSurat = Surat::whereYear('created_at', date('Y'))
