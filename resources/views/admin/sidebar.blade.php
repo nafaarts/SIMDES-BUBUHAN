@@ -32,13 +32,15 @@
     <li class="nav-item">
         <a class="nav-link" href="/surat">
             <i class="bi bi-file-earmark-text-fill"></i>
-            <span>Surat</span>
+            <span>Surat
+            <div class="badge bg-danger" id="data_surat_masuk" style="margin-left: 100px">0</div>
+            </span>
         </a>
     </li>
     {{-- <hr class="sidebar-divider"> --}}
     {{-- @can('isAdmin') --}}
         
-       <!-- Nav Item - Utilities Collapse Menu -->
+    <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
             aria-expanded="true" aria-controls="collapseUtilities">

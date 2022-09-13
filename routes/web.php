@@ -131,6 +131,9 @@ Route::resource('perangkat', PerangkatController::class);
 
 Route::post('/surat/send-message/{surat}', [SuratController::class, 'whatsapp'])->name('surat.wa');
 
+// notif surat masuk
+Route::get('/get_unopened_data', [SuratController::class, 'get_unopened_data'])->name('get_unopened_data');
+
 // Route::get('/proyek', [InformasiController::class, 'kelolaproyek']);
 // Route::get('/kegiatan', [InformasiController::class, 'kelolakegiatan']);
 // Route::get('/agenda', [InformasiController::class, 'kelolaagenda']);

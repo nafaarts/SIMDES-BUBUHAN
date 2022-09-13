@@ -40,3 +40,18 @@
 });
 </script>
 
+{{-- notif surat masuk --}}
+<script>
+    function getTotalSurat() {
+      $.ajax({
+        type: "get",
+        url: "get_unopened_data",
+        dataType: "json",
+        success: function(response){
+          $("#data_surat_masuk").text(response);
+        }
+      });
+    }
+    getTotalSurat()
+    setInterval(getTotalSurat, 3000);
+</script>

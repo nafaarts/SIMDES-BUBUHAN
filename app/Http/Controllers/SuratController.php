@@ -108,6 +108,7 @@ class SuratController extends Controller
     public function surat()
     {
         $surat = surat::latest()->get();
+        surat::where('isOpened', false)->update(['isOpened' => 1]);
         // $surat = surat::all();
         // dd($surat);
         return view('halamanadmin.surat', compact('surat')); 
@@ -224,6 +225,7 @@ class SuratController extends Controller
             $surat->tempatnamayangberbeda=$request->tempatnamayangberbeda;
             $surat->tanggalnamayangberbeda=$request->tanggalnamayangberbeda;
             $surat->surat_path = 'pdf/surat/' . $namePdf . '.pdf';
+            $surat->isOpened=0;
             $surat->save();
 
             $data=surat::where('id', '=', $surat->id)->first();
@@ -232,14 +234,14 @@ class SuratController extends Controller
     
             $no = sprintf('%03s', abs($data->no_surat + 1));
         //    dd($data);
-        $pdf = Pdf::loadView('surat.' . $data->jenis_surat, compact('data', 'bln', 'no'));
-            
-        Storage::put('public/' . $data->surat_path, $pdf->output());
+            $pdf = Pdf::loadView('surat.' . $data->jenis_surat, compact('data', 'bln', 'no'));
+                
+            Storage::put('public/' . $data->surat_path, $pdf->output());
 
-        // $data = Surat::where('id', '=', $id)->first();
-    
-            
-        return redirect()->back()->with('succes', 'Permohonan Anda Berhasil Dikirimkan');
+            // $data = Surat::where('id', '=', $id)->first();
+        
+                
+            return redirect()->back()->with('succes', 'Permohonan Anda Berhasil Dikirimkan');
 
 
         // surat::create($validateData);
@@ -319,6 +321,12 @@ class SuratController extends Controller
         // return $response->successful();
         // dd($response);
         return redirect()->back();
+    }
+
+    public function get_unopened_data()
+    {
+        $unopened_data = count(surat::where('isOpened', false)->get());
+        return json_encode($unopened_data);
     }
 
 }

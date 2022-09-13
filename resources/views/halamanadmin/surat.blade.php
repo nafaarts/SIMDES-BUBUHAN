@@ -103,35 +103,35 @@
                     <td>
                         <div class="d-flex" style="gap: 10px">
                             {{-- <a href="" class="btn btn-danger">
-                              <i class="bi bi-check-circle-fill"></i>
+                            <i class="bi bi-check-circle-fill"></i>
                             </a> --}}
-                           <form action="{{ route('surat.wa', $v->id) }}" method="post">
-                               @method('post')
-                               @csrf
-                               <button class="btn @if($v->status == 'selesai') 
-                               btn-success
-                                   @else 
-                               btn-danger
-                                   @endif" type="submit">
-                               <i class="bi bi-whatsapp"></i>
-                               </button>
-                           </form>                           
-                           <a target="_blank" href="{{ asset('storage/'. $v->surat_path) }}"  class="btn btn-primary">
-                               <i class="bi bi-eye"></i>                           
-                           </a>
-                           {{-- <a href="" class="btn btn-primary">
-                               <i class="bi bi-chat-dots"></i>
-                           </a> --}}
-                           {{-- <form action="{{ route('surat.destroy',  $v->id ) }}" method="post" class="d-inline">
-                               @method('delete')
-                               @csrf
-                               <button class="btn btn-danger" onclick="return confirm('yakin?')"><span><i class="bi bi-x-circle-fill"></i></span></button>
-                           </form> --}}
-                           <form action="{{ route('surat.destroy',  $v->id ) }}" method="post" class="d-inline" onsubmit="return confirmDelete(this)">
-                            @method('delete')
-                            @csrf
-                            <button type="submit" class="btn btn-danger"><i class="bi bi-x-square"></i></button>
-                        </form> 
+                            <form action="{{ route('surat.wa', $v->id) }}" method="post">
+                                @method('post')
+                                @csrf
+                                <button class="btn @if($v->status == 'selesai') 
+                                btn-success
+                                    @else 
+                                btn-danger
+                                    @endif" type="submit">
+                                <i class="bi bi-whatsapp"></i>
+                                </button>
+                            </form>                           
+                            <a target="_blank" href="{{ asset('storage/'. $v->surat_path) }}"  class="btn btn-primary">
+                                <i class="bi bi-eye"></i>                           
+                            </a>
+                            {{-- <a href="" class="btn btn-primary">
+                            <i class="bi bi-chat-dots"></i>
+                            </a> --}}
+                            {{-- <form action="{{ route('surat.destroy',  $v->id ) }}" method="post" class="d-inline">
+                                @method('delete')
+                                @csrf
+                                <button class="btn btn-danger" onclick="return confirm('yakin?')"><span><i class="bi bi-x-circle-fill"></i></span></button>
+                            </form> --}}
+                            <form action="{{ route('surat.destroy',  $v->id ) }}" method="post" class="d-inline" onsubmit="return confirmDelete(this)">
+                                @method('delete')
+                                @csrf
+                                <button type="submit" class="btn btn-danger"><i class="bi bi-x-square"></i></button>
+                            </form> 
                     </td>
                 </tr>    
             @endforeach          
